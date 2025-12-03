@@ -11,6 +11,7 @@ function ProductDetails() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [activeTab, setActiveTab] = useState('description');
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -71,8 +72,6 @@ function ProductDetails() {
       currency: 'USD'
     }).format(price);
   };
-
-  const [activeTab, setActiveTab] = useState('description');
 
   return (
     <div className="product-details-page">
