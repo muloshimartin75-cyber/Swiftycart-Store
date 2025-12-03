@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: swiftycart-backend
+    env: node
+    plan: free
+    branch: main
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node server.js
+    # root is the backend directory in this monorepo
+    root: backend
