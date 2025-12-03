@@ -16,9 +16,6 @@ import Checkout from "./pages/Checkout";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
 import CheckoutCancel from "./pages/CheckoutCancel";
 
-// Components
-import ThemeSelector from "./components/ThemeSelector";
-
 // Styles
 import "./App.css";
 import "./styles/amazon-theme.css";
