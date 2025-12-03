@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-do
 
 // Context Providers
 import { CartProvider, CartContext } from "./context/CartContext";
-import { ThemeProvider, ThemeContext } from "./context/ThemeContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 
 // Pages
@@ -26,7 +26,6 @@ import "./styles/amazon-theme.css";
 // Professional Navigation Component
 function Navigation() {
   const { cart } = useContext(CartContext);
-  const { darkMode, setDarkMode } = useContext(ThemeContext);
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");

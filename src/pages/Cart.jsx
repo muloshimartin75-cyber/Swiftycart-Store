@@ -1,11 +1,9 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { AuthContext } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 
 function Cart() {
   const { cart, removeFromCart, updateQuantity } = useContext(CartContext);
-  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const formatPrice = (price) => {

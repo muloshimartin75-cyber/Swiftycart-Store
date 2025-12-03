@@ -107,9 +107,9 @@ function ProductDetails() {
               {"★".repeat(Math.floor(product.rating || 0))}
               {"☆".repeat(5 - Math.floor(product.rating || 0))}
             </span>
-            <a href="#" className="review-count-link" onClick={(e) => e.preventDefault()}>
+            <button className="review-count-link" onClick={(e) => e.preventDefault()} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#0066c0', textDecoration: 'underline' }}>
               {product.reviewCount || 0} ratings
-            </a>
+            </button>
           </div>
 
           <div className="product-details-price">
