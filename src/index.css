@@ -1,0 +1,133 @@
+/* ===== AMAZON-INSPIRED PROFESSIONAL DESIGN SYSTEM ===== */
+:root {
+  /* Amazon Color Palette */
+  --amazon-orange: #FF9900;
+  --amazon-orange-hover: #e8880a;
+  --amazon-dark: #131921;
+  --amazon-dark-light: #232F3E;
+  --amazon-nav-hover: #364759;
+  --amazon-light-gray: #EAEDED;
+  --amazon-white: #FFFFFF;
+  --amazon-text: #0F1111;
+  --amazon-text-light: #565959;
+  --amazon-link: #007185;
+  --amazon-link-hover: #C7511F;
+  --amazon-success: #007600;
+  --amazon-error: #B12704;
+  --amazon-border: #D5D9D9;
+  --amazon-hover: #F7FAFA;
+  --amazon-rating: #FFA41C;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.08);
+  --shadow-md: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-lg: 0 4px 8px rgba(0,0,0,0.12);
+  --shadow-xl: 0 8px 16px rgba(0,0,0,0.15);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--amazon-light-gray);
+  color: var(--amazon-text);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* ===== LOADING STATES ===== */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: var(--spacing-lg);
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--amazon-light-gray);
+  border-top-color: var(--amazon-orange);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== ERROR STATES ===== */
+.error-container {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  background-color: var(--amazon-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  margin: var(--spacing-xl);
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--amazon-light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--amazon-text-light);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amazon-text);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  body {
+    font-size: 13px;
+  }
+}
